@@ -29,10 +29,11 @@ function scrollRight() {
     });
 }
 
+// target 
 document.addEventListener('DOMContentLoaded', function() {
     const externalLinks = document.querySelectorAll('.scroll-topics a');
     externalLinks.forEach(link => {
-        link.setAttribute('target', '_blank');
+        link.setAttribute('target', '');
     });
 });
 
