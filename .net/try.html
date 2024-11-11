@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative; /* Positioning for scroll buttons */
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .tree {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tree li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .treeChild {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .toggle {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .toggle:hover {
+            background-color: #0056b3;
+        }
+
+        .scroll-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: 20px auto;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .scroll-topics {
+            overflow-x: auto; /* Horizontal scroll */
+            white-space: nowrap; /* Prevents wrapping of child elements */
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            flex: 1;
+        }
+
+        .scroll-topics a {
+            display: inline-block; /* Display items in a row */
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #333;
+            white-space: nowrap; /* Prevents text wrapping */
+        }
+
+        .scroll-topics a:hover {
+            background-color: #e0e0e0;
+        }
+
+        .scroll-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .scroll-button:hover {
+            background-color: #0056b3;
+        }
+
+        .scroll-left {
+            left: 0;
+        }
+
+        .scroll-right {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <ol class="tree">
+                <li><a href="#home" class="anchor"><img src="#" alt="logo"></a></li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">Tutorials</button>
+                    <div class="treeChild">
+                        <nav>
+                            <h1>Tutorials</h1>
+                            <input type="text" placeholder="Filter symbol">
+                        </nav>
+                        <div>
+                            <div>HTML and CSS</div>
+                            <div>JavaScript</div>
+                            <div>Backend</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">Exercises</button>
+                    <div class="treeChild">
+                        <nav>
+                            <h1>Exercises</h1>
+                            <input type="text" placeholder="Filter symbol">
+                        </nav>
+                        <div>
+                            <div>HTML and CSS</div>
+                            <div>JavaScript</div>
+                            <div>Backend</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">Certificates</button>
+                    <div class="treeChild">
+                        <nav>
+                            <h1>Certificates</h1>
+                            <input type="text" placeholder="Filter symbol">
+                        </nav>
+                        <div>
+                            <div>HTML and CSS</div>
+                            <div>JavaScript</div>
+                            <div>Backend</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">Services</button>
+                    <div class="treeChild">
+                        <nav>
+                            <h1>Services</h1>
+                            <input type="text" placeholder="Filter symbol">
+                        </nav>
+                        <div>
+                            <div>HTML and CSS</div>
+                            <div>JavaScript</div>
+                            <div>Backend</div>
+                        </div>
+                    </div>
+                </li>
+                <li><input type="text" placeholder="Search... searchsymbol"></li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">My Profile</button>
+                    <div class="treeChild">
+                        <nav>
+                            <h1>My Profile</h1>
+                            <input type="text" placeholder="Filter symbol">
+                        </nav>
+                        <div>
+                            <div>Goals</div>
+                            <div>My learning</div>
+                            <div>Tests</div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#profile" class="anchor"><img src="#" alt="profilePicture"></a></li>
+            </ol>
+        </div>
+        <div class="scroll-container">
+            <button class="scroll-button scroll-left" onclick="scrollLeft()">&#9664;</button>
+            <div class="scroll-topics">
+                <a href="">Topic 1</a>
+                <a href="">Topic 2</a>
+                <a href="">Topic 3</a>
+                <a href="">Topic 4</a>
+                <a href="">Topic 5</a>
+                <a href="">Topic 6</a>
+                <a href="">Topic 7</a>
+                <a href="">Topic 8</a>
+                <a href="">Topic 9</a>
+                <a href="">Topic 10</a>
+                <a href="">Topic 11</a>
+                <a href="">Topic 12</a>
+                <a href="">Topic 13</a>
+                <a href="">Topic 14</a>
+                <a href="">Topic 15</a>
+                <a href="">Topic 16</a>
+                <a href="">Topic 17</a>
+                <a href="">Topic 18</a>
+                <a href="">Topic 19</a>
+                <a href="">Topic 20</a>
+            </div>
+            <button class="scroll-button scroll-right" onclick="scrollRight()">&#9654;</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChildren(button) {
+            var treeChild = button.nextElementSibling;
+            if (treeChild.style.display === "none" || treeChild.style.display === "") {
+                treeChild.style.display = "block";
+            } else {
+                treeChild.style.display = "none";
+            }
+        }
+
+        function scrollLeft() {
+            document.querySelector('.scroll-topics').scrollBy({
+                left: -100,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollRight() {
+            document.querySelector('.scroll-topics').scrollBy({
+                left: 100,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

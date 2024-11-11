@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Example</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#searchList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#searchList li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#searchList li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+</div>
+
+<ul id="searchList">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+    <li>Date</li>
+    <li>Elderberry</li>
+    <li>Fig</li>
+    <li>Grapes</li>
+</ul>
+
+<script>
+    function searchFunction() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toLowerCase();
+        const ul = document.getElementById('searchList');
+        const li = ul.getElementsByTagName('li');
+
+        for (let i = 0; i < li.length; i++) {
+            const textValue = li[i].textContent || li[i].innerText;
+            if (textValue.toLowerCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

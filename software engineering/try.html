@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Boxes in List Item</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .ulBox {
+            list-style: none; /* Remove default list styling */
+            padding: 0;
+            margin: 0;
+        }
+
+        .liBox {
+            display: flex;
+            justify-content: center; /* Horizontally center the boxes */
+            align-items: center;     /* Vertically center the boxes */
+            height: 200px;           /* Adjust height as needed */
+            padding: 10px;
+        }
+
+        .textBox {
+            width: 100%;            /* Set width of the boxes */
+            height: 200px;           /* Set height of the boxes */
+            display: flex;
+            justify-content: center; /* Horizontally center text inside the box */
+            align-items: center;     /* Vertically center text inside the box */
+            background-color: #f2f2f2; /* Background color for visibility */
+            border: 1px solid #ddd;  /* Border around the boxes */
+            margin: 0 10px;          /* Space between the boxes */
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="ulBox">
+        <li class="liBox">
+            <div class="textBox">Box 1</div>
+            <div class="textBox">Box 2</div>
+        </li>
+    </ul>
+</body>
+</html>

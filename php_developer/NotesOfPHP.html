@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Notes of PHP</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box topics">
+            <h2>Topics</h2>
+            <ol class="tree">
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">HTML Basic</button>
+                    <ul>
+                        <li><a href="#language" class="anchor">Language</a></li>
+                        <li><a href="#about" class="anchor">About HTML</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">HTML Tags</button>
+                    <ul>
+                        <li><a href="#tags" class="anchor">What is Tag?</a></li>
+                        <li><a href="#use" class="anchor">Use of Tags</a></li>
+                        <li><a href="#important" class="anchor">Important topics about tags</a></li>
+                        <li><a href="#tagExample" class="anchor">Example</a></li>
+                    </ul>
+                </li>
+                <li><a href="#version" class="anchor">HTML Version and Element</a></li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">HTML Doctype Declarations</button>
+                    <ul>
+                        <li><a href="#doctype" class="anchor">DOCTYPE Declaration</a></li>
+                        <li><a href="#doctypeExample" class="anchor">Basic Structure in HTML 5 doctype declaration</a></li>
+                    </ul>
+                </li>
+                <li><a href="#typography" class="anchor">HTML Typography Tags</a></li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">HTML Document Formatting and Performatting</button>
+                    <ul>
+                        <li><a href="#formatting" class="anchor">HTML Document Formatting</a></li>
+                        <li><a href="#perFormatting" class="anchor">Performatting</a></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="box content"> 
+            <div class="head">
+                <h1>Hypertext Preprocessor (PHP)</h1>
+            </div>
+        
+            <div>
+                <h2>PHP Basics</h2>
+                <ol>
+                    <li id="language"><h3><i class="fas fa-arrow-right"></i> What is PHP?</h3>
+                        <ul>
+                            <li><p>Programming language that is used to build web applications and websites.</p></li>
+                            <li><p>PHP stands for Hypertext Preprocessor.</p></li>
+                            <li><p>PHP is a server-side scripting language.</p></li>
+                            <li><p>PHP is faster than other scripting languages, such as ASP and jSP.</p></li>
+                        </ul>
+                        <h5>Hello World in PHP</h5> 
+                        <p>Make file with the .php extension.</p>
+                        <div class="code-container">
+                            <div class="button-container">
+                                <button class="copy-btn" onclick="copyCode()">Copy</button>
+                                <a href="code/html1.html" target="_blank"><button>Output</button></a>
+                            </div>
+                            <pre><code>
+                                &lt;?php
+                                    echo "Hello World!";
+                                    echo "Hey, Neetu.";
+                                ?>
+                            </code></pre>
+                        </div>
+                    </li>
+                    <li id="about"><h3><i class="fas fa-arrow-right"></i> Scripting Language</h3>
+                        <p>A programming laguage that is interpreted at runtime rather than compiled. <br>Two types of scripting language :- <br>1. Server Side Scripting Language <br>2. Client Side Scripting Language</p>
+                        <ul>
+                            <li><h4>Server Side Scripting Language</h4>
+                                <p>Code is execute on server side. <br>COMPUTER  -> request -> Code Execute Here (SERVER) <br>COMPUTER <- response <- SERVER</p>
+                            </li>
+                            <li><h4>Client Side Scripting Language</h4>
+                                <p>Code is execute on Client side. <br>Code Execute Here(COMPUTER)  -> request -> SERVER <br>COMPUTER <- response <- SERVER</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><h3><i class="fas fa-arrow-right"></i> Features</h3>
+                        <ul>
+                            <li><p>Open Source :- PHP is free to download and use.</p></li>
+                            <li><p>Platform Independent :- php code can run on any platform.</p></li>
+                            <li><p>Faster :- php scripts are usually faster than other scripting languages.</p></li>
+                            <li><p>PHP automatically converts a variable's data type.</p></li>
+                        </ul>
+                    </li>
+                    <li><h3><i class="fas fa-arrow-right"></i> History and Version</h3>
+                        <ul>
+                            <li><p>The current stable version of php is 8.2.6.</p></li>
+                            <li><p>The first version of PHP was available in early 1995.</p></li>
+                        </ul>
+                    </li>
+                    <li><h3><i class="fas fa-arrow-right"></i> Echo in PHP</h3> 
+                        <ul>
+                            <li><h5>What is Echo?</h5>
+                                <p>In php, echo is a language construct used to output one or more strings or variables to the browser or command line. It is often used to display HTML content, text, or the values of variables. <br>Since echo is not a function but a construct, you can use it without parentheses (though parentheses can be used, they are optional).</p>
+                            </li>
+                            <li><p>Case Insensitive.</p></li>
+                        </ul>
+                        <div class="code-container">
+                            <div class="button-container">
+                                <button class="copy-btn" onclick="copyCode()">Copy</button>
+                                <a href="code/html1.html" target="_blank"><button>Output</button></a>
+                            </div>
+                            <pre><code>
+                                &lt;?php    
+                                    // Display text
+                                    echo "My Name is Neetu Jangid. &lt;br>";
+                                    echo "I am persuing the BCA.(Hons.).";
+
+                                    // Displaying variables
+                                    $name = "Laxmi";
+                                    echo "Hello, " . $name;                    
+                                    
+                                    // Embedding html
+                                    echo "&lt;h1>Welcome to my website.&lt;/h1>";
+
+                                    // Dynamic Web Content
+                                    $username = "JahnDoe";
+                                    echo "&lt;input type='text' value='$username'>";
+
+                                    // Outputting Html , Css and JavaScript
+                                    echo "&lt;div style='color: blue;'>This is a blue text box.&lt;/div>";
+                                    echo "&lt;script>alert('Hello, World!');&lt;/script>";
+                                ?>
+                        </code></pre>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        
+            <div>
+                <h2>Html Tags</h2>
+                <ol>
+                    <li id="tags"><h3>What is tag ? </h3>
+                        <p>A text surrounded by angle brackets is known as tags. <br>Example : &lt;stpce&gt; <br>A letter which is surrounded by angle bracket is called tag like -: If stpce is written  like this then you will call it text but if &lt;stpce&gt; is written like this then you will say it is tag because here stpce is surrounded by angle brachet. <br>More concepts about tags</p>
+                        <table>
+                            <tr>
+                                <th>Text</th>
+                                <th>Tag</th>
+                            </tr>
+                            <tr>
+                                <td>html</td>
+                                <td>body</td>
+                            </tr>
+                            <tr>
+                                <td>< html ></td>
+                                <td>< body ></td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li id="use"><h3>Use of Tags : </h3>
+                        <p>Tags are used to display our contents on webpage and it also defines the place of our contents. <br>HTML tags are essential for structuring and presenting content on the web. They provide a way to define different parts of a webpage and their respective roles, enabling browsers to display content correctly and uniformly.</p>
+                        <ul>
+                            <li><h5>Content Structuring</h5>
+                                <p> HTML tags organize the content into logical sections, such as headings, paragraphs, lists, and tables. This helps both users and search engines understand the hierarchy and flow of information.</p></li>
+
+                            <li><h5>Styling and Presentation</h5>
+                                <p>Tags like &lt;div>, &lt;span>, and &lt;style> allow for CSS integration, enabling developers to style and position elements to create visually appealing web pages.</p></li>
+
+                            <li><h5>Interactivity</h5>
+                                <p>Tags such as &lt;a>, &lt;button>, &lt;form>, and &lt;input> enable user interaction, allowing users to navigate between pages, submit information, and interact with web applications.</p></li>
+
+                            <li><h5>Media Embedding</h5>
+                                <p>Tags like &lt;img>, &lt;video>, and &lt;audio> allow for embedding images, videos, and audio files, enriching the multimedia experience on web pages.</p></li>
+
+                            <li><h5>Accessibility</h5>
+                                <p>Semantic tags such as &lt;header>, &lt;footer>, &lt;article>, and &lt;nav> enhance accessibility by providing additional context to assistive technologies, making the web more inclusive for users with disabilities.</p></li>
+
+                            <li><h5>SEO (Search Engine Optimization)</h5>
+                                <p>Proper use of tags such as &lt;title>, &lt;meta>, &lt;h1>, and &lt;h2> helps improve search engine ranking by providing clear and relevant information about the content of a web page.</p></li>
+
+                            <li><h5>Behavior and Scripts</h5>
+                                <p>Tags like &lt;script> enable the inclusion of JavaScript to add dynamic behavior and functionality to web pages.</p></li>
+                        </ul>
+                    </li>
+                    <li id="important"><h3>Important topics about tags : </h3>
+                        <ol>
+                            <li><p>A tag starts with < > bricket and closed with < / > <br>Example : &lt;html&gt; &lt;/html&gt;</p></li>
+                            <li><p>A start tag also called opening tag and closed tag also called closing tag.</p></li>
+                            <li><p>A tag must be closed with < / > brickets</p></li>
+                            <li><p>A tag marked our content to display them on webpage. <br>Example : &lt;html&gt; our content &lt;/html&gt;</p></li>
+                        </ol>
+                    </li>
+                    <li id="tagExample"><h3>Example : </h3>
+                    <pre><code>
+            &lt;! DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt; First code in html &lt;title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    Welcome to my html file (Notes).
+                &lt;/body&gt;
+            &lt;/html&gt;
+        
+            <a href="code/html1.html" target="_blank"><button>Output</button></a>
+                    </code></pre>
+                    </li>
+                </ol>
+            </div>
+        
+            <div id="version">
+                <h2>Html Versions & Element</h2><br>
+                <p>HTML (Hyper text mark-up language) is developed by <span>Team Bemers-Lee.</span></p>
+                <table>
+                    <tr>
+                        <th>Versions</th>
+                        <th>Year</th>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>1991</td>
+                    </tr>
+                    <tr>
+                        <td>HTML 2.0</td>
+                        <td>1995</td>
+                    </tr>
+                    <tr>
+                        <td>HTML 3.2</td>
+                        <td>1997</td>
+                    </tr>
+                    <tr>
+                        <td>HTML 4.01</td>
+                        <td>1999</td>
+                    </tr>
+                    <tr>
+                        <td>XHTML</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>2014</td>
+                    </tr>
+                </table>
+                <p>An html element must have &lt;starting tag&gt; contents &lt;closing tag&gt; <br>Example : <br>&lt;body&gt; : starting tag <br>My name is amit : contents <br> &lt;/body&gt; : closing tag</p>
+            </div>
+        
+            <div>
+                <h2>Html Doctype Declarations</h2>
+                <ol>
+                    <li id="doctype"><h3>DOCTYPE Declarations : </h3>
+                        <p>Doctype declaration is a comment that tells in which version of Html coding is done. <br>Doctype declaration tells our web server that we are coding in HTML.</p>
+                        <h4>Types of Doctype Declaration : </h4>
+                        <ol>
+                            <li><h5>HTML 4.01</h5><br>
+                                <p>&lt;!DOCTYPE HTML PUBLIC "//W3C//DTDHTML4.01Transitional//EN""http://www.w3.org/TR/html4/loose.dtd"></p></li>
+                            <li><h5>XHTML</h5>
+                                <p>&lt;!DOCTYPE HTML PUBLIC "//W3C//DTDHTML4.01//EN""http://www.w3.org/TR/html4/strict.dtd"></p></li>
+                            <li><h5>HTML 5</h5>
+                                <p>&lt;!DOCTYPE html> And &lt;!doctype html></p></li>
+                        </ol>
+                        <h4>Note : </h4>
+                        <ol>
+                            <li><p>Always you have to do doctype declaration in html 5 version.</p></li>
+                            <li><p>If you do the doctype declaration in html5 version then you can take advantage of all the features of HTML 4 and XHTML.</p></li>
+                        </ol>
+                    </li>
+                    <li id="doctypeExample"><h3>Basic Structure in HTML 5 doctype declaration : </h3>
+                        <pre><code>
+            &lt;! DOCTYPE html&gt;
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt; Write title content here &lt;title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    Write body content here.
+                &lt;/body&gt;
+            &lt;/html&gt;
+                        </code></pre>
+                    </li>
+                </ol>
+            </div>
+        
+            <div id="typography">
+                <h2>Typography tags : </h2>
+                <p>Typography tags in HTML are elements used to structure and style text content on web pages, ensuring that text is presented in a clear, readable, and visually appealing manner. These tags help define the hierarchy, emphasis, and semantic meaning of the text. Here are some of the key typography tags in HTML : </p>
+                <ol>
+                    <li><a href="#heading" id="textLink"><p>Heading tag</p></a></li>
+                    <li><a href="#paragraph" id="textLink"><p>Paragraph tag</p></a></li>
+                    <li><a href="#centered" id="textLink"><p>Centered tag</p></a></li>
+                    <li><a href="#moving" id="textLink"><p>Moving tag</p></a></li>
+                    <li> 
+                        <ul><h5>Text Formatting : </h5>
+                            <li><p> &lt;b> : Bold text.</p></li>
+                            <li><p> &lt;strong> : Important text, typically rendered in bold.</p></li>
+                            <li><p> &lt;i> : Italic text.</p></li>
+                            <li><p> &lt;em> : Emphasized text, typically rendered in italics.</p></li>
+                            <li><p> &lt;mark> : Highlighted text.</p></li>
+                            <li><p> &lt;small> : Smaller text.</p></li>
+                            <li><p> &lt;del> : Deleted text (strikethrough).</p></li>
+                            <li><p> &lt;ins> : Inserted text (underline).</p></li>
+                            <li><p> &lt;sub> : Subscript text.</p></li>
+                            <li><p> &lt;sup> : Superscript text.</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul><h5>Quotes and Citations : </h5>
+                            <li><p> &lt;blockquote>: Block-level quotation.</p></li>
+                            <li><p> &lt;q>: Inline quotation.</p></li>
+                            <li><p> &lt;cite>: Citation or reference.</p></li>
+                            <li><p> &lt;abbr>: Abbreviation or acronym.</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul><h5>Lists : </h5>
+                            <li><p> &lt;ul>: Unordered list.</p></li>
+                            <li><p> &lt;ol>: Ordered list.</p></li>
+                            <li><p> &lt;li>: List item.</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul><h5>Preformatted Text : </h5>
+                            <li><p>&lt;pre>: Preformatted text, preserving spaces and line breaks.</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul><h5>Code and Keyboard Input : </h5>
+                            <li><p> &lt;code>: Inline code.</p></li>
+                            <li><p> &lt;kbd>: Keyboard input.</p></li>
+                            <li><p> &lt;samp>: Sample output.</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul><h5>Span and Div :</h5>
+                            <li><p> &lt;span>: Inline container for text.</p></li>
+                            <li><p> &lt;div>: Block-level container for text or other elements.</p></li>
+                        </ul>
+                    </li>
+                </ol>
+                <ol>
+                    <li id="heading"><h4>Heading text tags : </h4>
+                        <p>&lt;h1> to &lt;h6>: Define headings. <br>Heading tags in HTML are used to define headings for web content, providing a way to structure and organize information hierarchically. They range from &lt;h1> to &lt;h6>, with &lt;h1> being the most important and &lt;h6> the least important. These tags not only affect the visual presentation of the content but also play a crucial role in SEO and accessibility. <br>Main heading : &lt;h1> <br>Sub headings : &lt;h2>, &lt;h2>, &lt;h3>, &lt;h4>, &lt;h5> and &lt;h6></p>
+                        <pre><code>
+                            &lt;h1&gt; heading one &lt;/h1&gt;
+                            &lt;h2&gt; heading second &lt;/h2&gt;
+                            &lt;h3&gt; heading third &lt;/h3&gt;
+                            &lt;h4&gt; heading fourth &lt;/h4&gt;
+                            &lt;h5&gt; heading fifth &lt;/h5&gt;
+                            &lt;h6&gt; heading sixth &lt;/h6&gt;
+        
+                            <a href="code/headingTag2.html" target="_blank"><button>Output</button></a>
+                        </code></pre>
+                    </li>
+                    <li id="paragraph"><h4>Paragraph text tag : </h4>
+                        <p>&lt;p>: Defines a paragraph. <br>The &lt;p> tag in HTML is used to define a paragraph of text. It is a block-level element, meaning it will automatically start on a new line and take up the full width available. The &lt;p> tag is one of the most basic and commonly used elements in HTML, helping to structure and format text content.</p>
+                        <pre><code>
+                            &lt;p&gt; Welcome to my html website. &lt;/p&gt;
+                            
+                            <a href="code/paragraphTag3.html" target="_blank"><button>Output</button></a>
+                        </code></pre>
+                    </li>
+                    <li id="centered"><h4>Centered text tag : </h4>
+                        <p>The &lt;center> tag in HTML was used to center-align text and other elements within its container. However, it is important to note that the &lt;center> tag is deprecated in HTML 4.01 and not supported in HTML5. This means it should not be used in modern web development as it is no longer considered a best practice for styling content. Instead, CSS should be used to achieve centering.</p>
+                        <pre><code>
+                            &lt;p&gt; Center content write  &lt;/p&gt;
+                            
+                            <a href="code/centerTag4.html" target="_blank"><button>Output</button></a>
+                        </code></pre>
+                    </li>
+                    <li id="moving"><h4>Moving text tag : </h4>
+                        <p>The &lt;marquee> tag in HTML was used to create a scrolling text or image display within a web page. However, it is important to note that the &lt;marquee> tag is obsolete and deprecated in HTML5. This means it should not be used in modern web development as it is no longer supported by HTML standards and is not guaranteed to work in all browsers. Instead, CSS and JavaScript should be used to create scrolling or animated text and images.</p>
+                        <ul><h5>Attributes of the &lt;marquee> Tag : </h5>
+                            <li><p><u>direction </u>: Specifies the direction of the scroll (left, right, up, down).</p></li>
+                            <li><p><u>behavior</u> : Specifies the scrolling behavior (scroll, slide, alternate).</p></li>
+                            <li><p><u>scrollamount</u> : Specifies the speed of the scrolling (numeric value).</p></li>
+                            <li><p><u>scrolldelay</u> : Specifies the delay between each scroll movement (numeric value in milliseconds).</p></li>
+                            <li><p><u>loop</u> : Specifies the number of times the marquee will loop.</p></li>
+                            <li><p><u>bgcolor</u> : Specifies the background color of the marquee.</p></li>
+                        </ul>
+                        <pre><code>
+                            &lt;marquee&gt; Moving Content Write Here &lt;/marquee&gt;
+                            
+                            <a href="code/movingText5.html" target="_blank"><button>Output</button></a>
+                        </code></pre>
+                    </li>
+                </ol>
+            </div>
+        
+            <div>
+                <h2>HTML Document Formatting and Performatting : </h2>
+                <p>HTML Document Formatting and Preformatting refer to how HTML handles and displays content, particularly text.</p>
+                <ol>
+                    <li id="formatting"><h3>HTML Document Formatting : </h3>
+                        <p>HTML Document Formatting involves how text and elements are visually arranged and styled within an HTML document. This includes the use of various HTML tags to control the appearance and structure of content.</p>
+                        <ol>
+                            <li>
+                                <ul>
+                                    <h5>Bold Text (&lt;b> and &lt;strong>) :</h5>
+                                    <li><p>&lt;b> : Used to make text bold without implying any extra importance.</p></li>
+                                    <li><p>&lt;strong> : Used to emphasize text strongly, typically rendered in bold, and implies that the text is of strong importance.</p></li> 
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <h5>Italic Text (&lt;i> and &lt;em>) :</h5>
+                                    <li><p>&lt;i> : Used to italicize text without implying any emphasis.</p></li>
+                                    <li><p>&lt;em> : Used to emphasize text, typically rendered in italics, and implies that the text is important.</p></li>
+                                </ul>   
+                            </li>
+                            <li>
+                                <ul><h5>Underline Text (&lt;u>) :</h5>
+                                    <li><p>&lt;u> : Used to underline text, though it is often better to use CSS for underlining text for semantic clarity.</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul><h5>Strikethrough Text (&lt;s> and &lt;del>) :</h5>
+                                    <li><p>&lt;s> : Used to indicate text that is no longer accurate or relevant.</p></li>
+                                    <li><p>&lt;del> : Represents deleted text, often used in document revisions</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul><h5>Subscript and Superscript (&lt;sub> and &lt;sup>) :</h5>
+                                    <li><p>&lt;sub> : Used to display subscript text.</p></li>
+                                    <li><p>&lt;sup> : Used to display superscript text.</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul><h5>Inline Code (&lt;code>) :</h5>
+                                    <li><p>&lt;code> : Used to display inline code snippets.</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul><h5>Keyboard Input (&lt;kbd>) :</h5>
+                                    <li><p>&lt;kbd> : Used to indicate keyboard input.</p></li>
+                                </ul>   
+                            </li>
+                            <li>
+                                <ul><h5>Quotation (&lt;q> and &lt;blockquote>) :</h5>
+                                    <li><p>&lt;q> : Used for inline quotations.</p></li>
+                                    <li><p>&lt;blockquote> : Used for block-level quotations, often indented from the rest of the text.</p></li>
+                                </ul>    
+                            </li>
+                            <li><h4>Hr tag : </h4><p>Empty element tag</p>
+                                <pre><code>
+                                    &lt;hr&gt;
+                                    
+                                    <a href="code/hrTag6.html" target="_blank"><button>Output</button></a>
+                                </code></pre>
+                            </li>
+                        </ol>       
+                    </li>
+                    <li id="perFormatting"><h3>Performatting : </h3>
+                        <p>refers to preserving the exact formatting of text as it appears in the HTML code. This is achieved with the &lt;pre> tag, which maintains whitespace, line breaks, and formatting, making it useful for displaying code or other preformatted text.</p>
+                        <ul>
+                            <li><h4>Pre tag : </h4>
+                                <pre><code>
+                                    &lt;pre>
+                                        This is preformatted text.
+                                            It maintains whitespace and line breaks.
+                                    &lt;/pre>
+                                    
+                                    <a href="code/preTag7.html" target="_blank"><button>Output</button></a>
+                                </code></pre>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="otherOptions"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

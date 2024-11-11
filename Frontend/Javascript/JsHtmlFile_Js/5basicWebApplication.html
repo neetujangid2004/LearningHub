@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web Application</title>
+    <style>
+        button, input {
+            font-size: 30px; 
+            margin: 10px;
+        }
+    </style>
+</head>
+<body id="bdy" bgcolor="blue">
+    <button id="txt" onclick="text()">Neetu</button><br>
+    <button onclick="back()">Change background Color</button>
+    <button onclick="attributeS()" >Change background Color by attribute</button>
+    <div>
+        <img src="../images/img3.jpg" alt="" id="image" width="620px" height="380px"> 
+        <img src="../images/img4.jpg" alt="" onclick="image()" width="300px" height="200px">
+    </div>
+    <input type="text" name="" id="text">
+    <button onclick="show()">Click Here</button>
+    <br>    
+    <input type="text" name="" id="input">
+    <button onclick="output()">Click Here</button>
+    <h2>Output : <span id="head"></span></h2>
+
+    <script>
+        // How to change the text of existing html element
+        function text(){
+            let t = document.getElementById("txt");
+            t.innerHTML = "Prakash";
+
+            t.style.fontSize = "50px";
+            t.style.backgroundColor = "red";
+            t.style.color = "white";
+        }
+        function back(){
+            let bd = document.getElementById("bdy");
+            bd.style.backgroundColor = "red";
+        }
+
+        // Working with attribute selectors
+        function attributeS(){
+            let as = document.getElementById("bdy");
+            as.bgColor = "orange";
+        }
+
+        // How to print the value an attribute.
+        function image(){
+            let a = document.getElementById("image").src;
+            window.alert(a);
+        }
+
+        // print the user input
+        function show(){
+            let t = document.getElementById("text").value;
+            window.alert(t);
+        }
+        function output(){
+            let t = document.getElementById("input").value;
+            document.getElementById("head").innerHTML = t;
+        }
+    </script>
+</body>
+</html>

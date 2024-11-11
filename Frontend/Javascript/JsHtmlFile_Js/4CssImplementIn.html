@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS implementation in Javascript</title>
+    <style>
+        div {
+            display: inline-block;
+        }
+        h1 {
+            text-align: center;
+        }
+        #div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button  {
+            margin: 5px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"><h1 id="name"></h1></div>
+    <div id="boxTwo"><h1 id="hubby"></h1></div>
+    <h1 id="head">Hello World!</h1>
+    <div id="div">
+        <button onclick="color()">Change Color</button>
+        <button onclick="font()">Change Font style</button>
+    </div>
+
+    <script>
+        document.getElementById("name").innerHTML = "Neetu Jangid";
+        document.getElementById("name").style.color = "deeppink";
+        document.getElementById("box").style.width = "220px";
+        document.getElementById("box").style.height = "80px";
+        document.getElementById("box").style.border = "3px solid blue";
+        document.getElementById("box").style.textAlign = "center";
+
+        let b = document.getElementById("hubby");
+        b.innerHTML = "Prakash Jangid";
+        b.style.color = "deeppink";
+        
+        var a = document.getElementById("boxTwo");
+        a.style.width = "220px";
+        a.style.height = "80px";
+        a.style.background = "lightpink";
+        a.style.border = "3px solid blue";
+
+        let hh = document.getElementById("head");
+        function color(){
+            hh.style.color = "red";
+        }
+        function font(){
+            hh.style.fontFamily = "sans-serif";
+        }
+    </script>
+</body>
+</html>

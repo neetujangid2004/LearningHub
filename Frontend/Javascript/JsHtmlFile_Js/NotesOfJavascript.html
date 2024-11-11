@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes of Javascript</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url(image-copy.png);
+        }
+        h4 {
+            color: deeppink;
+            padding: 0px;
+            margin: 5px;
+        }
+        .color {
+            color: rgb(233, 129, 32);
+        }
+        h3 {
+            color:  rgb(30, 197, 219);
+            padding: 2%;
+            margin: 0;
+            height: 10px;
+        }
+        h2 {
+            color: rgb(231, 228, 23);
+            padding: 0%;
+            margin: 0;
+        }
+        div {
+            background-color: rgb(17, 7, 7);
+            color: white;
+            width: 100%;
+            padding: 10px;
+            margin: auto;
+            border: 5px solid rgb(204, 51, 51);
+            line-height: 30px;
+            font-size: x-large;
+        }
+        .code {
+            margin: 0;
+            padding-top: 0;
+            background-color: rgb(177, 211, 166);
+            border: 1px solid palevioletred;
+            width: 70%;
+            font-size: 15px;
+            line-height: 15px;
+            color: rgb(0, 0, 0);
+        }
+        table, tr, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+            margin-left: 20px;
+            margin-right: auto;
+            text-align: center;
+        }
+        table {
+            width: 80%;
+        }
+        span {
+            color: rgb(230, 50, 50);
+            text-decoration: solid;
+        }
+        #btn {
+            font-size: 25px;
+            background-color: red;
+            color: beige;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        #btn:hover {
+            background-color: coral;
+            font-size: 20px;
+        }
+        div .practice {
+            width: 100%;
+            height: 50px;
+            color: aliceblue;
+            background-color: gray;
+            border: none;
+        }
+        div .practice:hover {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 align="center">: Javascript :</h1>
+        Javascript is a programming language <br>Javascript is a Client Side Scripting Language<br>
+
+        <!-- start topic learning -->
+        <ul>
+            <li>
+                <h2>What is Scripting ?</h2>
+                Scripting language means story writer language of product development ex-web app, desktop app, android app etc.<br><h3>There are two types of scripting :- </h3>
+                1. Client Side ( Executes in browser [Javascript])<br>2. Server Side ( Executes in Server [PHP])<br><br>
+            </li>
+            <li>
+                <h2>Scripting Type of Javascript</h2>
+                <h3>1. Internal Scripting :- </h3>&lt; html &gt; or &lt; body &gt; <br>&lt; script &gt; write your Javascript code. &lt; /script &gt; <br>&lt; /html &gt; or &lt; /body &gt; <br>
+                <h3>2. External Scripting :-</h3>&lt; html &gt; or &lt; body &gt; <br>&lt; script src="externalpage.js" &gt; &lt; /script &gt; <br>&lt; /html &gt; or &lt; /body &gt;
+            </li>
+        </ul>
+
+        <h4>What is Data ?</h4>
+        Any information is called a data ex :- number, text, word, audio, video or any file. <br><br>
+
+        <ul>
+            <li>
+                <h2>How to get any output (result) in Javascript</h2>
+                <h3>window.alert()</h3>
+                If you want to display your result in a dialog box (Popup box) so you have to use window.alert() method.
+                <h3>document.write()</h3>
+                If you want to display your result in your webpage without using any html tag so you have to use document.write() method.
+                <h3>console.log()</h3>
+                If you want to display your result in the console window of your browser so you have to use console.log() method.
+                <h3>innerHTML</h3>
+                If you want to display your result with the help of html tag in your webpage so you have to use innerHTML method.
+            </li>
+        </ul> 
+
+        <h4>Q1. Write a program to print Hello World a dialog box.</h4>
+        &lt; body &gt; <br>&lt; script &gt; <br>window.alert("Hello World"); <br>&lt; /script &gt; <br>&lt; /body &gt; <br><br>
+        <h4>Usefull Symbol Name :-</h4>
+        <pre>()  Parenthesis
+[]  Square brackets or box brackets
+{}  Braces or curly brackets
+<>  angle brackets
+''  single quote
+""  double quote
+:   colon
+;   semi colon
+/   forward slash
+\   backward slash
+&   and
+-   hyphens
+_   underscore
+=   assign
+==  equal to
+*   astric  </pre>
+            <h4>What is programming ?</h4>
+            The steps that you take to achieve any result will be called programming.
+
+            <ul>
+                <li>
+                    <h2>Javascript Reserved Words (Keywords)</h2>
+                    Keywords are the way to define the meaning of any data for your interpreter and compiler. <br><br>
+                    <table>
+                        <caption>Keywords</caption>
+                        <tr>
+                            <td>abstract</td>
+                            <td>arguments</td>
+                            <td>await</td>
+                            <td>boolean</td>
+                            <td>break</td>
+                            <td>byte</td>
+                        </tr>
+                        <tr>
+                            <td>catch</td>
+                            <td>char</td>
+                            <td>class</td>
+                            <td>const</td>
+                            <td>continue</td>
+                            <td>debugger</td>
+                        </tr>
+                        <tr>
+                            <td>delete</td>
+                            <td>do</td>
+                            <td>double</td>
+                            <td>else</td>
+                            <td>enum</td>
+                            <td>eval</td>
+                        </tr>
+                        <tr>
+                            <td>extends</td>
+                            <td>false</td>
+                            <td>final</td>
+                            <td>finally</td>
+                            <td>float</td>
+                            <td>for</td>
+                        </tr>
+                        <tr>
+                            <td>goto</td>
+                            <td>if</td>
+                            <td>implements</td>
+                            <td>import</td>
+                            <td>in</td>
+                            <td>instanceof</td>
+                        </tr>
+                        <tr>
+                            <td>interface</td>
+                            <td>let</td>
+                            <td>long</td>
+                            <td>native</td>
+                            <td>new</td>
+                            <td>null</td>
+                        </tr>
+                        <tr>
+                            <td>private</td>
+                            <td>protected</td>
+                            <td>public</td>
+                            <td>return</td>
+                            <td>short</td>
+                            <td>static</td>
+                        </tr>
+                        <tr>
+                            <td>switch</td>
+                            <td>synchronized</td>
+                            <td>this</td>
+                            <td>throw</td>
+                            <td>typeof</td>
+                            <td>var</td>
+                        </tr>
+                        <tr>
+                            <td>volatile</td>
+                            <td>while</td>
+                            <td>with</td>
+                            <td>yield</td>
+                            <td>case</td>
+                            <td>default</td>
+                        </tr>
+                        <tr>
+                            <td>void</td>
+                            <td>super</td>
+                            <td>package</td>
+                            <td>int</td>
+                            <td>export</td>
+                            <td>function</td>
+                        </tr>
+                    </table><br>
+                </li>
+
+                <li>
+                    <h2>Javascript Function</h2>
+                    Identity of a function is () <br>
+                    A function is a group of statements that together perform a task And it works when you call it.
+                    
+                    <h3>There are two types of functions :-</h3>
+                    <h4 class="color">1. Built in function (predefined function) :-</h4>
+                    Their work is already sure And these can be called just. You can not make predefined function only you can call predefined function.
+
+<pre>Example :-  alert()  : window.alert()
+            write()  : document.write()
+            log()    : console.log()
+            <div class="code">&lt;body&gt;
+    &lt;script&gt;
+        document.write("Hello Prakash");
+        console.log("Hello World");
+        function hello() {
+            window.alert("Hello Neetu");
+        }
+    &lt;/script&gt;
+    &lt;h1>Hello World, I am Neetu Jangid &lt;/h1&gt;
+    &lt;!-- Predefined Function --&gt;
+    &lt;button onclick="hello()">OnClick&lt;/button&gt;
+    &lt;button onmouseover="hello()">OnMouseOver&lt;/button&gt;
+    &lt;button onmouseout="hello()">OnMouseOut&lt;/button&gt;
+                                
+    &lt;button onclick="window.close()">Close the window&lt;/button&gt;
+    &lt;button onclick="window.open('../images (7).jpg')">Open a photo&lt;/button&gt;
+    &lt;button onclick="window.print()">Print of open window&lt;/button&gt;
+&lt;/body&gt;
+        <a href="1index.html" target="_blank"><button id="btn">Output -></button></a>
+    </div></pre>
+
+                    Note : remember you can only call predefined functions you have not any permission to change or edit predefined functions.<br>If you want to call a predefined function you have to learn about mouse or keyboard events<br>
+                    <span>Mouse Events</span>:- onclicke, onchange, onmouseover, onmouseout<br><br>
+                    <h4 class="color">2. User defined function :-</h4>
+                    Javascript allows you to define functions according to your need. These functions are known as user-dfined functions.
+
+<pre><div class="code">&lt;body&gt;
+    &lt;script&gt;
+        function name(){
+            window.alert("Neetu Jangid");
+        }
+        function first(){
+            window.alert("I am a software engineer.");
+        }
+        function second(){
+            window.alert("I am work on js files.");
+        }
+    &lt;/script&gt;
+    &lt;h1>Hello World, I am Neetu Jangid &lt;/h1&gt;
+    &lt;!-- User defined Function --&gt;
+    &lt;h3>What is my name ?&lt;/h3&gt;
+    &lt;button onclick="name()">Click here to know your name&lt;/button&gt;
+    &lt;button onclick="first()">First&lt;/button>
+    &lt;button onclick="second()">Second&lt;/button>
+&lt;/body&gt;
+        <a href="1index.html" target="_blank"><button id="btn">Output -></button></a>
+    </div></pre>
+                </li>
+
+                <li>
+                    <h2>Variable :-</h2>
+                    <h3>What is Variable ?</h3>
+                    Variable is a medium that allows us to work on data stored in memeory. <br>
+                    X = 8
+
+<pre><div class="code">&lt;body&gt;
+    &lt;script&gt;
+        // variable :-  1.Global   2.Local
+        var x = 8;                  // global variable
+        document.write(x);
+        var s = "Neetu";
+        document.write(s);
+        function sum(){
+            var a = 10,b = 20;      // local variable   
+            var sum = a + b;    
+            window.alert(sum);
+        }
+        var a = 5 + 6 - 2 / 8 * 4;
+        document.write(a);
+    &lt;/script&gt;
+    &lt;button onclick="sum()">Click&lt;/button&gt;
+&lt;/body&gt;
+        <a href="2variable.html" target="_blank"><button id="btn">Output -></button></a>
+    </div></pre>
+                </li>
+
+                <li>
+                    <h2>Selectors in Javascript</h2>
+                    Selectors are used to select html elements to perform some task and actions on html elements. <h3>There are so many Selectors in Javascript :-</h3>
+                    <h4 class="color">1. getElementsByTagName() : </h4>select Html element through tag name. <br><br>
+                    <h4 class="color">2. getElementsByName() : </h4>select Html element through the value of name attribute. <br><br>
+                    <h4 class="color">3. getElementsById() : </h4>select Html element through the value of id attribute. <br><br>
+                    <h4 class="color">4. getElementsByClassName() : </h4>select Html element through the value of class attribute.
+
+<pre><div class="code">&lt;body&gt;
+    &lt;h1 id="hello">&lt;/h1&gt;
+    &lt;button onclick="helloN()">Click Me (N)&lt;/button&gt;
+    &lt;button onclick="helloP()">Click Me (P)&lt;/button&gt;
+    &lt;script&gt;
+        function helloN(){
+            document.getElementById("hello").innerHTML = "Neetu Jangid";
+        }
+        function helloP(){
+            var a = document.getElementById("hello");
+            a.innerHTML = "Prakash Jangid";
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+        <a href="3selectors.html" target="_blank"><button id="btn">Output -></button></a>
+    </div></pre>
+                </li>
+
+                <li>
+                    <h2>CSS implementation in Javascript :-</h2>
+<pre><div class="code">
+&lt;head>
+    &lt;style>
+        div {
+            display: inline-block;
+        }
+        h1 {
+            text-align: center;
+        }
+        #div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button  {
+            margin: 5px;
+            font-size: 15px;
+        }
+    &lt;/style>
+&lt;/head>
+&lt;body>
+    &lt;div id="box">&lt;h1 id="name">&lt;/h1>&lt;/div>
+    &lt;div id="boxTwo">&lt;h1 id="hubby">&lt;/h1>&lt;/div>
+    &lt;h1 id="head">Hello World!</h1>
+    &lt;div id="div">
+        &lt;button onclick="color()">Change Color</button>
+        &lt;button onclick="font()">Change Font style</button>
+    &lt;/div>
+
+    &lt;script>
+        document.getElementById("name").innerHTML = "Neetu Jangid";
+        document.getElementById("name").style.color = "deeppink";
+        document.getElementById("box").style.width = "220px";
+        document.getElementById("box").style.height = "80px";
+        document.getElementById("box").style.border = "3px solid blue";
+        document.getElementById("box").style.textAlign = "center";
+
+        let b = document.getElementById("hubby");
+        b.innerHTML = "Prakash Jangid";
+        b.style.color = "deeppink";
+        
+        var a = document.getElementById("boxTwo");
+        a.style.width = "220px";
+        a.style.height = "80px";
+        a.style.background = "lightpink";
+        a.style.border = "3px solid blue";
+
+        let hh = document.getElementById("head");
+        function color(){
+            hh.style.color = "red";
+        }
+        function font(){
+            hh.style.fontFamily = "sans-serif";
+        }
+    &lt;/script>
+&lt;/body>
+        <a href="4CssImplementIn.html" target="_blank"><button id="btn">Output -></button></a>
+</div></pre>                    
+                </li>
+
+                <li>
+                    <h2>Basic Web Application</h2>
+                    <h4>Q. How to change the text of existing html element</h4>
+<pre><div class="code">
+&lt;body id="bdy">
+    &lt;button id="txt" onclick="text()">Neetu&lt;/button>
+    &lt;button onclick="back()">Change background Color&lt;/button>
+    
+    &lt;script>
+        function text(){
+            let t = document.getElementById("txt");
+            t.innerHTML = "Prakash";
+    
+            t.style.fontSize = "50px";
+            t.style.backgroundColor = "red";
+            t.style.color = "white";
+        }
+        function back(){
+            let bd = document.getElementById("bdy");
+            bd.style.backgroundColor = "red";
+        }
+    &lt;/script>
+&lt;/body>
+        <a href="5basicWebApplication.html" target="_blank"><button id="btn">Output -></button></a>
+</div></pre>
+                    <h4>Q. Working with attribute selectors</h4>
+<pre><div class="code">
+&lt;body id="bdy" bgcolor="blue">
+    &lt;button onclick="attributeS()" >Change background Color by attribute&lt;/button>
+    
+    &lt;script>
+        // Working with attribute selectors
+        function attributeS(){
+            let as = document.getElementById("bdy");
+            as.bgColor = "orange";
+        }
+    &lt;/script>
+&lt;/body>
+        <a href="5basicWebApplication.html" target="_blank"><button id="btn">Output -></button></a>
+</div></pre>
+                    <h4>Q. How to print the value an attribute.</h4>
+<pre><div class="code">
+&lt;body>
+    &lt;div>
+        &lt;img src="../images/img3.jpg" alt="" id="image" width="620px" height="380px"> 
+        &lt;img src="../images/img4.jpg" alt="" onclick="image()" width="300px" height="200px">
+    &lt;/div>
+    
+    &lt;script>
+        // How to print the value an attribute.
+        function image(){
+            let a = document.getElementById("image").src;
+            window.alert(a);
+        }
+    &lt;/script>
+&lt;/body>
+        <a href="5basicWebApplication.html" target="_blank"><button id="btn">Output -></button></a>
+</div></pre>
+                    <h4>Q. print the user input.</h4>
+<pre><div class="code">
+&lt;body>
+    &lt;input type="text" name="" id="text">
+    &lt;button onclick="show()">Click Here&lt;/button>
+    &lt;br>    
+    &lt;input type="text" name="" id="input">
+    &lt;button onclick="output()">Click Here&lt;/button>
+    &lt;h2>Output : &lt;span id="head">&lt;/span>&lt;/h2>
+
+    &lt;script>
+        // print the user input
+        function show(){
+            let t = document.getElementById("text").value;
+            window.alert(t);
+        }
+        function output(){
+            let t = document.getElementById("input").value;
+            document.getElementById("head").innerHTML = t;
+        }
+    &lt;/script>
+&lt;/body>
+        <a href="5basicWebApplication.html" target="_blank"><button id="btn">Output -></button></a>
+</div></pre>
+
+<a href="assignment/1p.html" target="_blank"><button class="practice">Click and Go To Assignment Question</button></a>
+                </li>
+            </ul>
+    </div>
+</body>
+</html>

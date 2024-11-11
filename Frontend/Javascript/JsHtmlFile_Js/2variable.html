@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable in Javascript</title>
+</head>
+<body>
+    <script>
+        // variable :-  1.Global   2.Local
+        var x = 8;                  // global variable
+        document.write(x);
+        var s = "Neetu";
+        document.write(s);
+        function sum(){
+            var a = 10,b = 20;      // local variable   
+            var sum = a + b;    
+            window.alert(sum);
+        }
+        var a = 5 + 6 - 2 / 8 * 4;
+        document.write(a);
+    </script>
+    <br>
+    <button onclick="sum()">Click</button>
+</body>
+</html>

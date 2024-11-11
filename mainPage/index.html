@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 📚 Learning Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <div class="header">
+        <div class="nav">
+            <ol class="tree">
+                <li>
+                    <a href="#index.html" class="anchor">
+                        <div class="logo">
+                            <div class="logo-icon"></div>
+                            <div class="logo-text">
+                              <p class="learning">Learning</p>
+                              <p class="hub">Hub</p>
+                            </div> 
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">Tutorials <i class="fa fa-caret-up"></i></button>
+                    <div class="treeChild">
+                        <nav>
+                            <h1>Tutorials</h1>
+                            <input type="search" placeholder="Filter symbol">
+                        </nav>
+                        <div>
+                            <div>HTML and CSS</div>
+                            <div>JavaScript</div>
+                            <div>Backend</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">Exercises <i class="fa fa-caret-up"></i></button>
+                    <div class="treeChild">
+                        <nav>
+                            <h1>Exercises</h1>
+                            <input type="search" placeholder="Filter symbol">
+                        </nav>
+                        <div>
+                            <div>HTML and CSS</div>
+                            <div>JavaScript</div>
+                            <div>Backend</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">Certificates <i class="fa fa-caret-up"></i></button>
+                    <div class="treeChild">
+                        <nav>
+                            <h1>Certificates</h1>
+                            <input type="search" placeholder="Filter symbol">
+                        </nav>
+                        <div>
+                            <div>HTML and CSS</div>
+                            <div>JavaScript</div>
+                            <div>Backend</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">Services <i class="fa fa-caret-up"></i></button>
+                    <div class="treeChild">
+                        <nav>
+                            <h1>Services</h1>
+                            <input type="search" placeholder="Filter symbol">
+                        </nav>
+                        <div>
+                            <div>HTML and CSS</div>
+                            <div>JavaScript</div>
+                            <div>Backend</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="search" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </li>
+                <li>
+                    <button class="toggle" onclick="toggleChildren(this)">My Profile</button>
+                    <div class="treeChild">
+                        <nav>
+                            <h1>My Profile</h1>
+                            <input type="text" placeholder="Filter symbol">
+                        </nav>
+                        <div>
+                            <div>Goals</div>
+                            <div>My learning</div>
+                            <div>Tests</div>
+                        </div>
+                    </div>
+                    <img src="profilPic.png" alt="profilePicture" height="60px" class="profilePic">
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="section scroll-container">
+            <button class="scroll-button scroll-left" onclick="scrollLeft()">&#9664;</button>
+            <div class="scroll-topics" id="searchList">
+                <a href="../Frontend/Html/NotesOfHtml.html" class="topic">HTML</a>
+                <a href="" class="topic">Topic 2</a>
+                <a href="../javascript_/NotesOfJavaScript.html" class="topic">JavaScript</a>
+                <a href="../mysql/NotesOfMySql.html" class="topic">MySQL</a>
+                <a href="../software engineering/NotesOfSoftwareEngineering.html" class="topic">SoftwareEngineer</a>
+                <a href="../.net/NotesOf.NET.html" class="topic">.NET</a>
+                <a href="../php_developer/NotesOfPHP.html" class="topic">PHP</a>
+                <a href="" class="topic">Topic 7</a>
+                <a href="" class="topic">Topic 8</a>
+                <a href="" class="topic">Topic 9</a>
+                <a href="" class="topic">Topic 10</a>
+                <a href="" class="topic">Topic 11</a>
+                <a href="" class="topic">Topic 12</a>
+                <a href="" class="topic">Topic 13</a>
+                <a href="" class="topic">Topic 14</a>
+                <a href="" class="topic">Topic 15</a>
+                <a href="" class="topic">Topic 16</a>
+                <a href="" class="topic">Topic 17</a>
+                <a href="" class="topic">Topic 18</a>
+                <a href="" class="topic">Topic 19</a>
+                <a href="" class="topic">Topic 20</a>
+            </div>
+            <button class="scroll-button scroll-right" onclick="scrollRight()">&#9654;</button>
+        </div>
+        <div class="section main-contant">
+            <img src="learningPic.png" alt="Leaning Image">
+            <p>Hello, What Do You Want To Learn?</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search For Learning" onkeyup="searchFunction()" name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <a href="#">Not Sure Where To Begin?</a>
+        </div>  
+        <div class="section course-main">
+            <div class="sub">HTML</div>
+            <div class="sub">CSS</div>
+            <div class="sub">JavaScript</div>
+            <div class="sub">Software Engineer</div>
+            <div class="sub">VB.NET</div>
+            <div class="sub">MySQL</div>
+            <div class="sub">PHP</div>
+            <div class="sub">JAVA</div>
+            <div class="sub">Topic 1</div>
+            <div class="sub">Topic 2</div>
+            <div class="sub">Topic 3</div>
+            <div class="sub">Topic 4</div>
+        </div>    
+    </div>
+
+    <div class="footer">
+        <div class="goToTop" onclick="scrollToTop()">Go To Top</div>
+        <div class="logo footer-icon">
+            <div class="logo-icon"></div>
+            <div class="logo-text">
+              <p class="learning">Learning</p>
+              <p class="hub">Hub</p>
+            </div> 
+        </div>
+        <ul>
+            <li><a href="#">Totorials</a></li>
+            <li><a href="#">Exercises</a></li>
+            <li><a href="#">Certificates</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+        <p>Help Line Number : +1 1234567890</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2024 by NeetuCoder || All Right Reservd.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

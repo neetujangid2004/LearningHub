@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hr tag </title>
+    <link rel="stylesheet" href="codeCSS.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <div class="nav">
+                <h2>Write HTML Code</h2>
+                <button onclick="runHtmlCode()">Run <span class="arrow">&#9654;</span></button>
+            </div>
+            <textarea id="htmlCode">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Hr tag </title>
+    <link rel="stylesheet" href="codeCSS.css">
+</head>
+&lt;body>
+    <h2><center> Welcome to My html website </center></h2>
+    <hr>
+&lt;/body>
+</html>
+            </textarea>
+        </div>
+        <div class="box">
+            <h2>Output</h2>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+
+    <script src="logic.js"></script>
+
+</body>
+</html>

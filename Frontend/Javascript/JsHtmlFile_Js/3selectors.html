@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in Javascript</title>
+</head>
+<body>
+    <h1 id="hello"></h1>
+    <button onclick="helloN()">Click Me (N)</button>
+    <button onclick="helloP()">Click Me (P)</button>
+    <script>
+        function helloN(){
+            document.getElementById("hello").innerHTML = "Neetu Jangid";
+        }
+        function helloP(){
+            var a = document.getElementById("hello");
+            a.innerHTML = "Prakash Jangid";
+        }
+    </script>
+</body>
+</html>
